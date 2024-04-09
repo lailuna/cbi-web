@@ -17,11 +17,7 @@
           <div class="introduce_content text-center">
             <div class="section_title"><span class="title_style">關於雲湧</span></div>
             <p class="introduce_text">
-              雲湧資訊成立于2016年：時間不長、人數不多、但熱情洋溢 ~
-            </p>
-            <p class="introduce_text">
-              研發團隊源自於各方技術好手：以我們多年在數位儲存應用、跨平台整合與軟硬體設計的開發經驗，致力於提供客戶在特定市場與應用<br />MMI
-              + API = M2M 的最佳解決方案…
+              研發團隊源自於各方技術好手：以我們多年來在客製化系統開發、公私有雲應用、跨平台整合與資訊軟體設計的開發經驗，致力於提供客戶在特定市場與應用的最佳解決方案…
             </p>
           </div>
         </b-container>
@@ -43,10 +39,10 @@
             <div class="introduce_content p-md-5">
               <b-container>
                 <div class="title"><span class="title_style">經營理念</span></div>
-                <p class="introduce_text">「使命必達」是本公司對客戶的承諾</p>
                 <p class="introduce_text">
                   用服務打造產品，用務實探索創新，用互惠共創商機
                 </p>
+                <p class="introduce_text">「使命必達」是本公司對客戶的承諾</p>
               </b-container>
             </div>
           </b-col>
@@ -175,29 +171,8 @@
     </section>
     <!-- 發展大世紀 -->
     <section>
-      <div class="content_section developEvent">
-        <b-container>
-          <div class="timeline_section">
-            <div class="section_title"><span class="title_style">發展大事紀</span></div>
-            <!-- <div class="develop_img_pc">
-              <b-img src="../assets/cbi_develop.png" fluid alt="Responsive image"></b-img>
-            </div>
-            <div class="develop_img_mobile">
-              <b-img
-                src="../assets/cbi_develop_mobile.png"
-                fluid
-                alt="Responsive image"
-              ></b-img>
-            </div> -->
-            <Timeline
-              :timeline-items="dataTimeline"
-              :message-when-no-items="messageWhenNoItems"
-              :unique-year="true"
-              :show-day-and-month="true"
-              order="desc"
-            />
-          </div>
-        </b-container>
+      <div class="cbi_develop">
+        <b-img src="../assets/cbi_develop.png" fluid alt="Responsive image"></b-img>
       </div>
     </section>
   </div>
@@ -250,101 +225,11 @@
   color: #0f172a;
 }
 
-// 發展大事紀
-.timeline_section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (max-width: 767px) {
-  .certificate_pc {
-    display: none;
-  }
-
-  .certificate_mobile {
-    display: block;
-  }
-}
-
-/* 發展大世紀 */
-.developEvent {
+.cbi_develop {
+  padding: 30px;
+  text-align: center;
   background-image: url(../assets/develop_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 60px;
-  margin-bottom: 0;
-}
-
-.develop_img_pc {
-  text-align: center;
-}
-
-.develop_img_mobile {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .developEvent {
-    padding: 20px;
-  }
-
-  .develop_img_pc {
-    display: none;
-  }
-
-  .develop_img_mobile {
-    display: block;
-  }
 }
 </style>
-
-<script>
-import Timeline from "timeline-vuejs";
-
-export default {
-  name: "App",
-  components: {
-    Timeline,
-  },
-  uniqueTimeline: true,
-  data: () => ({
-    messageWhenNoItems: "There arent items",
-    dataTimeline: [
-      {
-        from: new Date(2023, 1),
-        description: "承接桃園大眾捷運股份有限公司與臺中捷運股份有限公司之相關專案",
-      },
-      {
-        from: new Date(2022, 11),
-        description:
-          "承接國家圖書館官網優化與維護專案、台灣港務股份有限公司之系統精進與開發專案",
-      },
-      {
-        from: new Date(2021, 11),
-        description:
-          "承接新北大眾捷運股份有限公司與國防部後備指揮部之相關專案:包含網站、系統之開發與精進",
-      },
-      {
-        from: new Date(2020, 11),
-        description:
-          "承接台灣電力股份有限公司放射實驗室與臺北大眾捷運股份有限公司之相關系統維護專案",
-      },
-      {
-        from: new Date(2019, 11),
-        description: "承接財團法人資訊工業策進會、臺灣高等檢察署之相關系統精進與開發專案",
-      },
-      {
-        from: new Date(2017, 11),
-        description:
-          "承接金融監督管理委員會專案:Oracle移轉至MS SQL之資料庫建置與資料移轉作業",
-      },
-      {
-        from: new Date(2016, 11),
-        description: "成立雲湧資訊",
-      },
-    ],
-  }),
-};
-</script>

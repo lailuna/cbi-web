@@ -40,7 +40,7 @@
             <div class="service_content">
               <b-container>
                 <div class="title">
-                  <span class="title_style">物聯網系統整合設計與開發</span>
+                  <span class="title_style">AI 物聯網系統整合設計與開發</span>
                 </div>
                 <ul>
                   <li>從雲端架構規劃設計到應用服務的開發</li>
@@ -65,7 +65,7 @@
             <div class="service_content">
               <b-container>
                 <div class="title">
-                  <span class="title_style">Mobile APP設計與開發</span>
+                  <span class="title_style">Mobile APP 設計與開發</span>
                 </div>
                 <ul>
                   <li>介面設計、功能制訂與流程規劃 (UI/UxD)</li>
@@ -104,7 +104,7 @@
             <div class="service_content">
               <b-container>
                 <div class="title">
-                  <span class="title_style">應用系統更新與維護</span>
+                  <span class="title_style">客製化資訊系統開發與維護</span>
                 </div>
                 <ul>
                   <li>雲端系統：front-end / back-end & DB</li>
@@ -246,25 +246,49 @@
           <div class="section_title"><span class="title_style">我們的客戶</span></div>
           <b-row>
             <b-col cols="6" md="3" class="client_item">
-              <b-img src="../assets/client_tpmetro.png" fluid alt="Responsive image"></b-img>
+              <b-img
+                src="../assets/client_tpmetro.png"
+                fluid
+                alt="Responsive image"
+              ></b-img>
             </b-col>
             <b-col cols="6" md="3" class="client_item">
-              <b-img src="../assets/client_ntmetro.png" fluid alt="Responsive image"></b-img>
+              <b-img
+                src="../assets/client_ntmetro.png"
+                fluid
+                alt="Responsive image"
+              ></b-img>
             </b-col>
             <b-col cols="6" md="3" class="client_item">
-              <b-img src="../assets/client_tcmetro.png" fluid alt="Responsive image"></b-img>
+              <b-img
+                src="../assets/client_tcmetro.png"
+                fluid
+                alt="Responsive image"
+              ></b-img>
             </b-col>
             <b-col cols="6" md="3" class="client_item">
-              <b-img src="../assets/client_tymetro.png" fluid alt="Responsive image"></b-img>
+              <b-img
+                src="../assets/client_tymetro.png"
+                fluid
+                alt="Responsive image"
+              ></b-img>
             </b-col>
             <b-col cols="6" md="3" class="client_item">
-              <b-img src="../assets/client_taipower.png" fluid alt="Responsive image"></b-img>
+              <b-img
+                src="../assets/client_taipower.png"
+                fluid
+                alt="Responsive image"
+              ></b-img>
             </b-col>
             <b-col cols="6" md="3" class="client_item">
               <b-img src="../assets/client_AFRC.png" fluid alt="Responsive image"></b-img>
             </b-col>
             <b-col cols="6" md="3" class="client_item">
-              <b-img src="../assets/client_INDSR.png" fluid alt="Responsive image"></b-img>
+              <b-img
+                src="../assets/client_INDSR.png"
+                fluid
+                alt="Responsive image"
+              ></b-img>
             </b-col>
             <b-col cols="6" md="3" class="client_item">
               <b-img src="../assets/client_ner.png" fluid alt="Responsive image"></b-img>
@@ -344,5 +368,4 @@
   box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 8px;
 } */
-
 </style>

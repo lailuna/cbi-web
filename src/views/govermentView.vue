@@ -2,13 +2,6 @@
   <div>
     <b-nav class="nav_header">
       <router-link
-        to="/case_gov"
-        class="nav_header_item"
-        exact
-        exact-active-class="active"
-        >政府</router-link
-      >
-      <router-link
         to="/case_defense"
         class="nav_header_item"
         exact

@@ -47,9 +47,7 @@
           <b-col lg="6" class="aboutUs">
             <p>關於我們</p>
             <p>
-              雲湧資訊成立于2016年：時間不長、人數不多、但熱情洋溢 !<br />
-              研發團隊源自於各方技術好手：以我們多年在數位儲存應用、跨平台整合與軟硬體設計的開發經驗，致力於提供客戶在特定市場與應用
-              MMI + API = M2M 的最佳解決方案…
+              研發團隊源自於各方技術好手：以我們多年來在客製化系統開發、公私有雲應用、跨平台整合與資訊軟體設計的開發經驗，致力於提供客戶在特定市場與應用的最佳解決方案…
             </p>
           </b-col>
           <!-- <b-col lg="4" class="weblink text-center">
@@ -71,19 +69,41 @@
               </li>
             </ul>
           </b-col> -->
-          <b-col lg="6" class="text-right">
+          <b-col lg="6" class="d-flex justify-content-center">
             <ul class="cbi_data">
               <li class="cbi_dataItem fs_18">雲湧資訊股份有限公司</li>
               <li class="cbi_dataItem fs_18">Cloud-Bridging Information Inc.</li>
-              <li class="cbi_dataItem">新北市汐止區新台五路一段 97 號 19F 之 7</li>
               <li class="cbi_dataItem">
-                TEL：<a href="tel:+886-2-26971971">(02) 2697-1971 </a>
+                <b-img
+                  src="../src/assets/icon_home.png"
+                  fluid
+                  alt="Responsive image"
+                ></b-img
+                >：新北市汐止區新台五路一段 97 號 19F 之 7
               </li>
-              <li class="cbi_dataItem">FAX：(02) 2697-1991</li>
               <li class="cbi_dataItem">
-                E-MAIL：<a href="mailto:admin@cloud-bridging.com"
-                  >admin@cloud-bridging.com</a
-                >
+                <b-img
+                  src="../src/assets/icon_phone.png"
+                  fluid
+                  alt="Responsive image"
+                ></b-img
+                >：<a href="tel:+886-2-26971971">(02) 2697-1971 </a>
+              </li>
+              <li class="cbi_dataItem">
+                <b-img
+                  src="../src/assets/icon_fax.png"
+                  fluid
+                  alt="Responsive image"
+                ></b-img
+                >：(02) 2697-1991
+              </li>
+              <li class="cbi_dataItem">
+                <b-img
+                  src="../src/assets/icon_mail.png"
+                  fluid
+                  alt="Responsive image"
+                ></b-img
+                >：<a href="mailto:admin@cloud-bridging.com">admin@cloud-bridging.com</a>
               </li>
             </ul>
           </b-col>
@@ -156,7 +176,7 @@ ul {
 }
 
 .footer_section .aboutUs {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .footer_section .weblink {

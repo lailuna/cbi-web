@@ -3,11 +3,7 @@
     <b-row>
       <b-col cols="12" md="4" class="case_item">
         <router-link to="/case_transportation_tpmetro">
-          <b-img
-            src="../assets/client_tpmetro.png"
-            fluid
-            alt="Responsive image"
-          ></b-img>
+          <b-img src="../assets/client_tpmetro.png" fluid alt="Responsive image"></b-img>
           <p class="caseUnit_name">臺北捷運</p>
         </router-link>
       </b-col>
@@ -27,6 +23,12 @@
         <router-link to="/case_transportation_tcmetro">
           <b-img src="../assets/client_tcmetro.png" fluid alt="Responsive image"></b-img>
           <p class="caseUnit_name">臺中捷運</p>
+        </router-link>
+      </b-col>
+      <b-col cols="12" md="4" class="case_item">
+        <router-link to="/case_other_tipc">
+          <b-img src="../assets/client_tipc.png" fluid alt="Responsive image"></b-img>
+          <p class="caseUnit_name">臺灣港務股份有限公司</p>
         </router-link>
       </b-col>
     </b-row>

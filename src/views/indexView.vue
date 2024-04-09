@@ -1,21 +1,56 @@
 <template>
   <div id="app">
-    <div class="topBanner_pc">
+    <!-- <div class="topBanner_pc">
       <b-img src="../assets/topBanner_pc.png" fluid alt="Responsive image"></b-img>
     </div>
     <div class="topBanner_mobile">
       <b-img src="../assets/topBanner_mobile.png" fluid alt="Responsive image"></b-img>
-    </div>
+    </div> -->
+    <!-- top_carousel -->
+    <section>
+      <div class="carousel_section carousel_pc">
+        <b-container>
+          <b-carousel
+            id="carousel-1"
+            :interval="4000"
+            controls
+            background="#ababab"
+            img-width="1024"
+            img-height="480"
+            style="text-shadow: 1px 1px 2px #333"
+          >
+            <b-carousel-slide img-src="../assets/topBanner01_pc.png"></b-carousel-slide>
+            <b-carousel-slide img-src="../assets/topBanner02_pc.png"></b-carousel-slide>
+          </b-carousel>
+        </b-container>
+      </div>
+      <div class="carousel_section carousel_mobile">
+        <b-container>
+          <b-carousel
+            id="carousel-1"
+            :interval="4000"
+            controls
+            background="#ababab"
+            img-width="1024"
+            img-height="480"
+            style="text-shadow: 1px 1px 2px #333"
+          >
+            <b-carousel-slide img-src="../assets/topBanner01_pc.png"></b-carousel-slide>
+            <b-carousel-slide img-src="../assets/topBanner02_pc.png"></b-carousel-slide>
+          </b-carousel>
+        </b-container>
+      </div>
+    </section>
     <!-- 公司簡介 -->
     <section>
       <div class="vision_section">
         <b-container>
           <b-row class="vision_content">
             <b-col md="6" class="vision_text">
-              <div class="title">vision</div>
+              <div class="title">VISION</div>
               <div class="content">
+                <p>用服務打造產品，用務實探索創新， 用互惠共創商機</p>
                 <span class="highLight_text">「使命必達」</span> 是本公司對客戶的承諾
-                用服務打造產品，用務實探索創新， 用互惠共創商機
               </div>
               <router-link to="/companyView" class="primary_btn">公司簡介</router-link>
             </b-col>
@@ -28,6 +63,7 @@
     </section>
     <!-- carousel -->
     <section>
+      <!-- pc -->
       <div class="carousel_section carousel_pc">
         <b-container>
           <b-carousel
@@ -46,18 +82,18 @@
             <b-carousel-slide img-src="../assets/carousel04.png"></b-carousel-slide>
             <b-carousel-slide img-src="../assets/carousel05.png"></b-carousel-slide>
           </b-carousel>
-          <div class="text-center">
+          <div class="text-center mt-5">
             <router-link to="/serviceView" class="primary_btn">服務簡介</router-link>
           </div>
         </b-container>
       </div>
+      <!-- mobile -->
       <div class="carousel_section carousel_mobile">
         <b-container>
           <b-carousel
             id="carousel-1"
             :interval="4000"
             controls
-            indicators
             background="#ababab"
             img-width="1024"
             img-height="480"
@@ -69,46 +105,52 @@
             <b-carousel-slide img-src="../assets/carousel_RWD_04.png"></b-carousel-slide>
             <b-carousel-slide img-src="../assets/carousel_RWD_05.png"></b-carousel-slide>
           </b-carousel>
-          <b-row>
-            <b-col col="6"
-              ><a href="" class="primary_btn icon"
-                ><b-img
-                  src="../assets/icon_service.png"
-                  fluid
-                  alt="Responsive image"
-                ></b-img
-                >服務簡介</a
-              ></b-col
-            >
-            <b-col col="6"
-              ><a href="" class="primary_btn icon"
-                ><b-img src="../assets/icon_case.png" fluid alt="Responsive image"></b-img
-                >實績案例</a
-              ></b-col
-            >
-          </b-row>
-          <b-row>
-            <b-col col="6"
-              ><a href="" class="primary_btn icon"
-                ><b-img
-                  src="../assets/icon_recruit.png"
-                  fluid
-                  alt="Responsive image"
-                ></b-img
-                >人才招募</a
-              ></b-col
-            >
-            <b-col col="6"
-              ><a href="" class="primary_btn icon"
-                ><b-img
-                  src="../assets/icon_contactUs.png"
-                  fluid
-                  alt="Responsive image"
-                ></b-img
-                >聯絡我們</a
-              ></b-col
-            >
-          </b-row>
+          <div class="mt-3">
+            <b-row>
+              <b-col col="6">
+                <router-link to="/companyView" class="primary_btn icon">
+                  <b-img
+                    src="../assets/icon_service.png"
+                    fluid
+                    alt="Responsive image"
+                  ></b-img>
+                  公司簡介
+                </router-link>
+              </b-col>
+              <b-col col="6">
+                <router-link to="/case_gov" class="primary_btn icon">
+                  <b-img
+                    src="../assets/icon_case.png"
+                    fluid
+                    alt="Responsive image"
+                  ></b-img>
+                  實績案例
+                </router-link>
+              </b-col>
+            </b-row>
+            <b-row>
+              <b-col col="6">
+                <router-link to="/recruitView" class="primary_btn icon">
+                  <b-img
+                    src="../assets/icon_recruit.png"
+                    fluid
+                    alt="Responsive image"
+                  ></b-img>
+                  人才招募
+                </router-link>
+              </b-col>
+              <b-col col="6">
+                <router-link to="/contactView" class="primary_btn icon">
+                  <b-img
+                    src="../assets/icon_contactUs.png"
+                    fluid
+                    alt="Responsive image"
+                  ></b-img>
+                  聯絡我們
+                </router-link>
+              </b-col>
+            </b-row>
+          </div>
         </b-container>
       </div>
     </section>
@@ -116,13 +158,13 @@
     <section>
       <div class="news_section">
         <div class="news_header">
-          <div class="title_en">News</div>
+          <div class="title_en">NEWS</div>
           <div class="title_ch">雲湧快訊</div>
         </div>
         <b-container>
           <b-row class="news_content">
             <b-col md="6" class="news_item">
-              <div class="news_date">2024/01/01</div>
+              <div class="news_date">2024/04/08</div>
               <div class="news_category">最新消息</div>
               <div class="news_title">
                 <router-link to="/cbiNewsView">官方網站全新改版上線！</router-link>
@@ -220,7 +262,7 @@ p:last-child {
   margin-bottom: 40px;
 }
 
-.vision_section .content .highLight_text {
+.highLight_text {
   background-color: #4baaaa;
   color: #fff;
   padding: 7px 0;
@@ -298,12 +340,8 @@ p:last-child {
   margin-bottom: 50px;
 }
 
-.carousel_section .carousel {
-  margin-bottom: 80px;
-}
-
 .carousel_section .carousel-item {
-  background: #fff !important;
+  background: transparent !important;
 }
 
 .carousel_section .carousel-indicators {
@@ -417,5 +455,13 @@ p:last-child {
     min-height: 180px;
     margin-bottom: -1px;
   }
+}
+
+.top_carousel {
+  margin-top: -200px;
+}
+
+.carousel.slide {
+  background: rgb(255, 255, 255) !important;
 }
 </style>

@@ -18,7 +18,7 @@
               <div class="title">雲湧訊息</div>
               <div class="news_list">
                 <div class="news_item">
-                  <div class="news_date">2024/01/01</div>
+                  <div class="news_date">2024/04/08</div>
                   <div class="news_category">最新消息</div>
                   <div class="news_title">
                     <router-link to="/cbiNewsView">官方網站全新改版上線！</router-link>
@@ -31,9 +31,8 @@
                 <div class="news_photo"></div>
                 <div class="title">官方網站全新改版上線！</div>
                 <div class="content">
-                  官方網站全新改版，象徵雲湧資訊將以全新的面相展現給長久以來一直不斷支持我們的客戶，持續提供專業與優質的服務。
-                  新官網為提供最佳的使用體驗與服務，採用「響應式網站」的概念，適用於「桌機、手機、平板」等行動裝置。
-                  期許帶給您更好的服務！舊雨新知，請多指教！
+                  官方網站全新改版，期許帶給您更豐富的資訊，更好的瀏覽體驗！
+                  我們將秉持使命必達的精神，持續為政府機關及各行各業提供專業與優質的服務～
                 </div>
               </div>
             </b-col>
