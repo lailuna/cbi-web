@@ -24,7 +24,7 @@
           </b-carousel>
         </b-container>
       </div>
-      <div class="carousel_section carousel_mobile">
+      <div class="carousel_section carousel_mobile top_carousel_mobile">
         <b-container>
           <b-carousel
             id="carousel-1"
@@ -463,5 +463,9 @@ p:last-child {
 
 .carousel.slide {
   background: rgb(255, 255, 255) !important;
+}
+
+.top_carousel_mobile {
+  margin-top: 80px;
 }
 </style>

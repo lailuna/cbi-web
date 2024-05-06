@@ -166,7 +166,7 @@ export default {
 
       Email.send({
         SecureToken: "b6367569-0f47-4cdb-9235-9206053dc51b",
-        To: "admin@cloud-bridging.com",
+        To: "infinitezero0913@gmail.com",
         From: "miuccia@cloud-bridging.com",
         Subject: "雲湧資訊Admin",
         Body:
