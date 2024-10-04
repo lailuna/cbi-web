@@ -55,115 +55,23 @@
         <b-container>
           <div class="introduce_content">
             <div class="section_title"><span class="title_style">相關認證</span></div>
-            <!-- pc -->
-            <div class="certificate_pc">
+            <div class="certificate">
               <b-container fluid>
                 <b-row>
-                  <b-col lg="4" class="certificate_item">
+                  <b-col
+                    lg="4"
+                    class="certificate_item"
+                    v-for="item in certificateList"
+                    :key="item.id"
+                  >
                     <div class="certificate_img">
-                      <b-img
-                        src="../assets/certificate_PMP.png"
-                        fluid
-                        alt="Responsive image"
-                      ></b-img>
+                      <b-img :src="item.img" fluid :alt="item.title"></b-img>
                     </div>
-                    <div class="certificate_title">專案管理</div>
-                    <p class="certificate_text">國際PMP專業證書</p>
-                  </b-col>
-                  <b-col lg="4" class="certificate_item">
-                    <div class="certificate_img">
-                      <b-img
-                        src="../assets/certificate_CompTIA.jpg"
-                        fluid
-                        alt="Responsive image"
-                      ></b-img>
-                    </div>
-                    <div class="certificate_title">資訊安全</div>
-                    <p class="certificate_text">Microsoft Certified Professional</p>
-                  </b-col>
-                  <b-col lg="4" class="certificate_item">
-                    <div class="certificate_img">
-                      <b-img
-                        src="../assets/certificate_DB.png"
-                        fluid
-                        alt="Responsive image"
-                      ></b-img>
-                    </div>
-                    <div class="certificate_title">資料庫</div>
-                    <p class="certificate_text">
-                      Microsoft Certified Solutions Associate (SQL server)
-                    </p>
-                  </b-col>
-                  <b-col lg="4" class="certificate_item">
-                    <b-img src="../assets/ISO.png" fluid alt="Responsive image"></b-img>
-                    <div class="certificate_title">資訊安全</div>
-                    <p class="certificate_text">ISO27001:2013</p>
-                  </b-col>
-                  <b-col lg="4" class="certificate_item">
-                    <b-img src="../assets/ISO_2.png" fluid alt="Responsive image"></b-img>
-                    <div class="certificate_title">資訊安全</div>
-                    <p class="certificate_text">
-                      ISO27001:2013資訊安全管理系統主導稽核員
-                    </p>
-                  </b-col>
-                  <b-col lg="4" class="certificate_item">
-                    <b-img
-                      src="../assets/certificate_C.jpg"
-                      fluid
-                      alt="Responsive image"
-                    ></b-img>
-                    <div class="certificate_title">應用程式</div>
-                    <p class="certificate_text">資策會C#工程師就業養成班</p>
+                    <div class="certificate_category">{{ item.category }}</div>
+                    <p class="certificate_title">{{ item.title }}</p>
                   </b-col>
                 </b-row>
               </b-container>
-            </div>
-            <!-- mobile -->
-            <div class="certificate_mobile">
-              <b-carousel
-                class="certificate_carousel"
-                id="carousel-1"
-                :interval="4000"
-                controls
-                indicators
-                background="#FFF"
-                img-width="1024"
-                img-height="450"
-                style="text-shadow: 1px 1px 2px #333"
-              >
-                <b-carousel-slide img-src="../assets/certificate_PMP.png">
-                  <div class="certificate_title">專案管理</div>
-                </b-carousel-slide>
-                <b-carousel-slide img-src="../assets/certificate_CompTIA.jpg">
-                  <div class="certificate_title">資訊安全</div>
-                </b-carousel-slide>
-                <b-carousel-slide img-src="../assets/certificate_DB.png">
-                  <div class="certificate_title">資料庫</div>
-                </b-carousel-slide>
-              </b-carousel>
-            </div>
-            <div class="certificate_mobile">
-              <b-carousel
-                class="certificate_carousel"
-                id="carousel-1"
-                :interval="4000"
-                controls
-                indicators
-                background="#FFF"
-                img-width="1024"
-                img-height="450"
-                style="text-shadow: 1px 1px 2px #333"
-              >
-                <b-carousel-slide img-src="../assets/ISO.png">
-                  <div class="certificate_title">資訊安全</div>
-                </b-carousel-slide>
-                <b-carousel-slide img-src="../assets/ISO_2.png">
-                  <div class="certificate_title">資訊安全</div>
-                </b-carousel-slide>
-                <b-carousel-slide img-src="../assets/certificate_C.jpg">
-                  <div class="certificate_title">應用程式</div>
-                </b-carousel-slide>
-              </b-carousel>
             </div>
           </div>
         </b-container>
@@ -194,35 +102,26 @@
 }
 
 /* 相關認證 */
-
-.certificate_title {
+.certificate_category {
   color: #4baaaa;
   text-align: center;
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
-  margin-bottom: 15px;
 }
 
-.certificate_item .certificate_text {
-  text-align: center;
-  font-size: 16px;
-}
+.certificate_item {
+  .certificate_img {
+    text-align: center;
+    img {
+      max-height: 450px;
+    }
+  }
 
-.certificate_img img {
-  max-height: 240px;
-}
-
-/* 相關認證_mobile */
-.certificate_mobile {
-  display: none;
-}
-
-.certificate_carousel .carousel-caption {
-  position: unset;
-  text-shadow: none;
-  background-color: #fff;
-  color: #0f172a;
+  .certificate_title {
+    text-align: center;
+    font-size: 16px;
+  }
 }
 
 .cbi_develop {
@@ -233,3 +132,54 @@
   background-size: cover;
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      certificateList: [
+        {
+          img: require("../assets/certificate_PMP.png"),
+          category: "專案管理",
+          title: "國際PMP專業證書",
+        },
+        {
+          img: require("../assets/certificate_CompTIA.jpg"),
+          category: "資訊安全",
+          title: "Microsoft Certified Professional",
+        },
+        {
+          img: require("../assets/certificate_DB.png"),
+          category: "資料庫",
+          title: "Microsoft Certified Solutions Associate (SQL server)",
+        },
+        {
+          img: require("../assets/certificate_ISO_2013.png"),
+          category: "資訊安全",
+          title: "ISO 27001:2013",
+        },
+        {
+          img: require("../assets/certificate_ISO_2013_train.png"),
+          category: "資訊安全",
+          title: "ISO 27001:2013資訊安全管理系統主導稽核員",
+        },
+        {
+          img: require("../assets/certificate_C.jpg"),
+          category: "應用程式",
+          title: "資策會C#工程師就業養成班",
+        },
+        {
+          img: require("../assets/certificate_ISO_2022_ch.jpg"),
+          category: "資訊安全",
+          title: "ISO 27001:2022",
+        },
+        {
+          img: require("../assets/certificate_ISO_2022_train.png"),
+          category: "資訊安全",
+          title: "ISO 27001:2022資訊安全管理系統主導稽核員",
+        },
+      ],
+    };
+  },
+};
+</script>

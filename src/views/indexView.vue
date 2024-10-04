@@ -164,10 +164,12 @@
         <b-container>
           <b-row class="news_content">
             <b-col md="6" class="news_item">
-              <div class="news_date">2024/04/08</div>
+              <div class="news_date">2024/09/01</div>
               <div class="news_category">最新消息</div>
               <div class="news_title">
-                <router-link to="/cbiNewsView">官方網站全新改版上線！</router-link>
+                <router-link to="/cbiNewsView"
+                  >賀! 正式通過 ISO 27001:2022 國際認證</router-link
+                >
               </div>
             </b-col>
           </b-row>
@@ -200,8 +202,9 @@ p:last-child {
   color: #4baaaa;
   font-size: 32px;
   font-weight: bold;
-  border-bottom: 2px solid #4baaaa;
+  border-bottom: 3px solid #4baaaa;
   margin-bottom: 30px;
+  padding: 5px 0;
 }
 
 .content_section {

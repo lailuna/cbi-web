@@ -13,53 +13,62 @@
     <section>
       <div class="content_section">
         <b-container>
-          <b-row>
-            <b-col md="3">
-              <div class="title">雲湧訊息</div>
-              <div class="news_list">
-                <div class="news_item">
-                  <div class="news_date">2024/04/08</div>
-                  <div class="news_category">最新消息</div>
-                  <div class="news_title">
-                    <router-link to="/cbiNewsView">官方網站全新改版上線！</router-link>
-                  </div>
-                </div>
-              </div>
-            </b-col>
-            <b-col md="9">
-              <div class="news_content">
-                <div class="news_photo"></div>
-                <div class="title">官方網站全新改版上線！</div>
-                <div class="content">
-                  官方網站全新改版，期許帶給您更豐富的資訊，更好的瀏覽體驗！
-                  我們將秉持使命必達的精神，持續為政府機關及各行各業提供專業與優質的服務～
-                </div>
-              </div>
-            </b-col>
-          </b-row>
+          <div class="news_tabs">
+            <b-card no-body>
+              <b-tabs pills card vertical>
+                <b-tab v-for="item in newsList" :title="item.title" :key="item.title">
+                  <b-card-text>
+                    <div class="news_header">
+                      <div class="news_date">{{ item.date }}</div>
+                      <div class="news_category">{{ item.category }}</div>
+                    </div>
+                    <div class="news_content">
+                      <div class="title">{{ item.title }}</div>
+                      <div class="content">{{ item.content }}</div>
+                    </div>
+                  </b-card-text>
+                </b-tab>
+              </b-tabs>
+            </b-card>
+          </div>
         </b-container>
       </div>
     </section>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.title {
-  color: #4baaaa;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
+<style lang="scss">
+.news_tabs {
+  .tabs {
+    min-height: 250px;
+  }
 
-.news_list {
-  .news_item {
-    &:not(:last-child) {
-      margin-bottom: 15px;
+  .card-header {
+    background-color: #fff;
+  }
+
+  .nav-item {
+    .nav-link {
+      color: #0f172a;
+      border-top: 4px solid #4baaaa;
+      background-color: #f0f2f4;
+      padding: 20px;
+
+      &.active {
+        background-color: #e5f3f3;
+      }
     }
+  }
+
+  .news_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     .news_date {
       color: #4baaaa;
       font-size: 14px;
-      margin-bottom: 10px;
+      margin-right: 15px;
     }
 
     .news_category {
@@ -70,28 +79,63 @@
       font-size: 14px;
       margin-bottom: 10px;
     }
+  }
 
-    .news_title {
-      a {
-        color: #0f172a;
-      }
+  .news_content {
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #0f172a;
+      margin-bottom: 10px;
     }
   }
 }
 
-.news_content {
-  .news_photo {
-    min-height: 400px;
-    background-image: url(../assets/news_example.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  .title {
-    font-size: 32px;
-    font-weight: bold;
-    color: #0f172a;
-    margin-top: 25px;
+@media (max-width: 767px) {
+  .news_tabs {
+    .tabs {
+      min-height: 500px;
+
+      .col-auto {
+        width: 100%;
+      }
+
+      .nav-item {
+        padding: 10px 0;
+      }
+    }
+    .news_content {
+      .title {
+        font-size: 24px;
+      }
+      .content {
+        font-size: 16px;
+      }
+    }
   }
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      newsList: [
+        {
+          date: "2024/09/01",
+          category: "最新消息",
+          title: "賀! 正式通過 ISO 27001:2022 國際認證",
+          content: "資安再升級，本公司正式取得 ISO 27001:2022 的國際認證 !",
+        },
+        {
+          date: "2024/04/08",
+          category: "最新消息",
+          title: "官方網站全新改版上線！",
+          content:
+            "官方網站全新改版，期許帶給您更豐富的資訊，更好的瀏覽體驗！我們將秉持使命必達的精神，持續為政府機關及各行各業提供專業與優質的服務～",
+        },
+      ],
+    };
+  },
+};
+</script>

@@ -35,13 +35,13 @@
             <b-img src="../assets/active_img01.png" fluid alt="Responsive image"></b-img>
           </b-col>
           <b-col lg="3">
-            <b-img src="../assets/active_img02.png" fluid alt="Responsive image"></b-img>
+            <b-img src="../assets/active_img02.jpg" fluid alt="Responsive image"></b-img>
           </b-col>
           <b-col lg="3">
             <b-img src="../assets/active_img03.jpg" fluid alt="Responsive image"></b-img>
           </b-col>
           <b-col lg="3">
-            <b-img src="../assets/active_img04.png" fluid alt="Responsive image"></b-img>
+            <b-img src="../assets/active_img04.jpg" fluid alt="Responsive image"></b-img>
           </b-col>
         </b-row>
       </div>
